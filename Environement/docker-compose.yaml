@@ -1,12 +1,12 @@
 services:
   db:
     image: mysql
-    container_name: db_todo
+    container_name: db_environement
     environment:
-      MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: todo
+      MYSQL_ROOT_PASSWORD: ${MDP_DB:-password}
+      MYSQL_DATABASE: environement_db
     volumes:
-      - local_mysql_todo:/var/lib/mysql
+      - local_mysql_environement_db:/var/lib/mysql
     ports:
       - "3306:3306"
     networks:
@@ -23,7 +23,7 @@ services:
     networks:
       - mysql-phpmyadmin
 volumes:
-  local_mysql_todo:
+  local_mysql_environement_db:
 
 networks:
   mysql-phpmyadmin:
