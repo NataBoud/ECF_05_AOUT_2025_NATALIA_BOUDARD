@@ -14,6 +14,7 @@ import java.util.Map;
 public class TravellogDtoStat {
     private double totalDistanceKm;
     private double totalEmissionsKg;
+    private int numberOfTravellogs;
     private Map<String,Double> byMode;
 
     public TravellogDtoStat() {

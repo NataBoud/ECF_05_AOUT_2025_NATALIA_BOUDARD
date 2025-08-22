@@ -16,7 +16,7 @@ import java.util.Locale;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/travellog")
+@RequestMapping("/api/travel-log")
 public class TravellogController {
 
     private final TravellogsService travellogsService;
@@ -27,11 +27,11 @@ public class TravellogController {
 
     @GetMapping
     public ResponseEntity<List<TravellogDtoResponse>> getAllTravellogs (){
-        return ResponseEntity.ok(travellogsService.get(10));
+        return ResponseEntity.ok(travellogsService.get(5));
     }
 
     @GetMapping("/stats/{id}")
-    public ResponseEntity<TravellogDtoStat> getStatFromObseration (@PathVariable long id){
+    public ResponseEntity<TravellogDtoStat> getStatFromObservation (@PathVariable long id){
         return ResponseEntity.ok(travellogsService.getStat(id));
     }
 

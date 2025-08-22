@@ -1,5 +1,6 @@
 package org.example.environement.repository;
 
+import org.example.environement.entity.Travellog;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

@@ -15,7 +15,7 @@ import org.example.environement.entity.enums.Category;
 @Builder
 public class Specie {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(nullable = false)
     private String commonName;
